@@ -1,0 +1,90 @@
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --neonGreen: hsl(150, 100%, 66%);
+  --grayishBlue: hsl(216, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+}
+
+/* #4F5D74 */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(217, 19%, 16%);
+}
+
+.section {
+  background-color: var(--darkGrayishBlue);
+  text-align: center;
+  border-radius: 10px;
+  width: 34rem;
+}
+
+.advice__number {
+  color: var(--neonGreen);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  padding: 40px 0 20px 0;
+  font-weight: 800;
+}
+
+.advice__text {
+  color: var(--lightCyan);
+  font-weight: 800;
+  /* min-height: 150px; */
+  font-size: 2.5rem;
+  padding: 0 15px;
+}
+
+.advice__divider {
+  margin: 20px 20px 0 20px;
+  height: 2rem;
+  background: url("./images/pattern-divider-mobile.svg") center / cover
+    no-repeat;
+}
+
+.advice__dice {
+  padding: 18px 20px;
+  background-color: var(--neonGreen);
+  border-radius: 100px;
+  transform: translateY(50%);
+  offset: none;
+  border: none;
+}
+
+.advice__dice:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 10px 10px rgba(82, 255, 168, 0.3);
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    width: 35%;
+  }
+
+  .advice__divider {
+    background: url("./images/pattern-divider-desktop.svg") center / cover
+      no-repeat;
+  }
+}
